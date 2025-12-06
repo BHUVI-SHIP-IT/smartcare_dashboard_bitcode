@@ -1,0 +1,114 @@
+Prompt:
+Design a modern, realistic web dashboard interface for a healthcare platform called SmartCare – an AI-driven post-hospitalization care management system.
+
+The dashboard is used by doctors and hospitals to monitor discharged patients, track progress, and view predictive analytics.
+
+Overall Design Style:
+
+Clean, professional, human-centered healthcare interface.
+
+Soft teal (#2BB6B3), white, and light gray color palette with subtle gradients.
+
+Minimal, flat design with rounded edges and plenty of whitespace.
+
+Calm and trustworthy tone (no harsh colors).
+
+Uses intuitive icons, graphs, and tables.
+
+Include these dashboard elements (for separate screens or sections):
+
+1️⃣ Main Dashboard Overview Screen
+
+Title: “SmartCare Dashboard – Patient Monitoring Overview.”
+
+Top bar: SmartCare logo (left), doctor’s profile photo (right).
+
+Statistics cards (top row):
+
+🟢 Total Patients: 124
+
+🟡 At Risk: 16
+
+🔴 Critical Cases: 4
+
+🩺 Average Adherence: 82%
+
+Graph section:
+
+Line chart showing “Readmission Risk Trend (30 Days)”
+
+Pie chart showing “Patient Adherence Distribution.”
+
+Table below with patient details:
+
+Columns → Name | Condition | Adherence % | Risk Level | Last Update | Actions (View / Chat)
+
+Sidebar menu: Dashboard | Patients | Analytics | Chat | Settings | Logout
+
+2️⃣ Patient Detail Screen
+
+Title: “Patient Profile – John Doe.”
+
+Tabs: Overview | Care Plan | History | Reports
+
+Patient info card:
+
+Profile photo, age, diagnosis, discharge date, assigned doctor.
+
+Care Plan Summary:
+
+Medication list with status toggles (Taken/Missed).
+
+Diet recommendations and exercise routines.
+
+Graph: “Adherence Over Time.”
+
+Button: “Update Plan” or “Send Reminder.”
+
+3️⃣ Analytics & Insights Screen
+
+Title: “Predictive Analytics – Readmission Risk.”
+
+AI Insights panel showing:
+
+High-risk patients (Red flag icon).
+
+Risk percentage score (e.g., 78%).
+
+Factors contributing to risk (e.g., missed medication, late follow-up).
+
+Trendline charts for overall hospital adherence and readmission rates.
+
+4️⃣ Communication / Chat Screen
+
+Secure chat interface between doctor and patient.
+
+Patient messages in gray bubbles, doctor messages in teal.
+
+Left sidebar showing list of patient names with unread message badges.
+
+Input box with attachment icon and “Send” button.
+
+5️⃣ Settings / Admin Section
+
+Manage doctor accounts, notification preferences, and hospital branding.
+
+Toggle for “Enable AI Risk Alerts.”
+
+“Export Analytics Report” button.
+
+UI/UX Feel:
+
+Clean, data-rich but uncluttered layout.
+
+Rounded tables, elegant typography (Poppins / Inter).
+
+Consistent iconography (flat line-style medical icons).
+
+Uses white cards with shadow and accent teal highlights.
+
+Mood:
+Professional, calm, reliable — feels like a real healthcare dashboard designed for doctors.
+
+Device context:
+Desktop browser (large screen, full-width layout, high resolution)
