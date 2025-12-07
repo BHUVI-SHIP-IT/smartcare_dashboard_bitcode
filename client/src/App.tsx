@@ -3,22 +3,50 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 import NotFound from "@/pages/not-found";
 import Dashboard from "@/pages/Dashboard";
 import PatientDetail from "@/pages/PatientDetail";
 import Analytics from "@/pages/Analytics";
 import Chat from "@/pages/Chat";
 import Settings from "@/pages/Settings";
+import Login from "@/pages/Login";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Dashboard} />
-      <Route path="/patients" component={Dashboard} /> {/* For now reuse dashboard or can build a list view later if requested */}
-      <Route path="/analytics" component={Analytics} />
-      <Route path="/chat" component={Chat} />
-      <Route path="/settings" component={Settings} />
-      <Route path="/patient/:id" component={PatientDetail} />
+      <Route path="/login" component={Login} />
+      <Route path="/">
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      </Route>
+      <Route path="/patients">
+        <ProtectedRoute>
+          <Dashboard />
+        </ProtectedRoute>
+      </Route>
+      <Route path="/analytics">
+        <ProtectedRoute>
+          <Analytics />
+        </ProtectedRoute>
+      </Route>
+      <Route path="/chat">
+        <ProtectedRoute>
+          <Chat />
+        </ProtectedRoute>
+      </Route>
+      <Route path="/settings">
+        <ProtectedRoute>
+          <Settings />
+        </ProtectedRoute>
+      </Route>
+      <Route path="/patient/:id">
+        <ProtectedRoute>
+          <PatientDetail />
+        </ProtectedRoute>
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );
@@ -27,10 +55,12 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Router />
-      </TooltipProvider>
+      <AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
